@@ -1,0 +1,8 @@
+<SearchPlugin xmlns="http://www.mozilla.org/2006/browser/search/" xmlns:os="http://a9.com/-/spec/opensearch/1.1/">
+<os:ShortName>DS Search</os:ShortName>
+<os:Description>Search DS Search</os:Description>
+<os:InputEncoding>UTF-8</os:InputEncoding>
+<os:Image width="16" height="16">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAADBQTFRF8o+a9aWu6kha////4wAaAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWDxhVAAAAGhJREFUOE9jfMwg9Z+BEgAygBLMQIlmsOsH3oBP/bP+kwq+Ll0HDze8XgApBAFkb77yiAKLwQwhGAboBoAMgxmCEYgwCWQvITsX5hKsBiAL4osZnF6AOZWYQCU6EIlJIwQDkZAhw8AAAMsWK7SZKfcuAAAAAElFTkSuQmCC</os:Image>
+<os:Url type="text/html" method="GET" template="http://labor.nordsonne.de/indi/index.php?eID=redirectsearch&amp;q={searchTerms}">
+</os:Url>
+</SearchPlugin>

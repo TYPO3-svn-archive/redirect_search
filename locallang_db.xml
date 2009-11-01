@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>database</type>
+		<description>Language labels for database tables/fields belonging to extension 'redirect_search'</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="tt_content.pi_flexform.sheet_general">Plugin Details</label>
+			<label index="tt_content.pi_flexform.field_PluginName">Plugin Name</label>
+			<label index="tt_content.pi_flexform.field_PluginDescription">Description</label>
+			<label index="tt_content.pi_flexform.field_PluginIcon">Plugin Icon</label>
+			<label index="tx_redirectsearch_search">Searchengine</label>
+			<label index="tx_redirectsearch_search.hotkey">hotkey</label>
+			<label index="tx_redirectsearch_search.url">URL</label>
+			<label index="tx_redirectsearch_redirect">Redirect</label>
+			<label index="tx_redirectsearch_redirect.hotkey">hotkey</label>
+			<label index="tx_redirectsearch_redirect.url">url</label>
+			<label index="tt_content.list_type_pi1">Add a FF Searchbar</label>
+			<label index="tx_redirectsearch_search.tsmarker">TypoScript Marker</label>
+			<label index="tx_redirectsearch_search.marker">Marker</label>
+			<label index="tx_redirectsearch_search.usetsmarker">Use TypoScript Marker</label>			
+		</languageKey>
+		<languageKey index="de" type="array">
+			<label index="tt_content.pi_flexform.sheet_general">Plugin Eigenschaften</label>
+			<label index="tt_content.pi_flexform.field_PluginName">Plugin Name</label>
+			<label index="tt_content.pi_flexform.field_PluginDescription">Beschreibung</label>
+			<label index="tt_content.pi_flexform.field_PluginIcon">Plugin Icon</label>
+			<label index="tx_redirectsearch_search">Suchmaschine</label>
+			<label index="tx_redirectsearch_search.tsmarker">TypoScript Marker</label>
+			<label index="tx_redirectsearch_search.marker">Marker</label>
+			<label index="tx_redirectsearch_search.usetsmarker">Use TypoScriptMarker</label>			
+			<label index="tx_redirectsearch_search.hotkey">Tastenkürzel</label>
+			<label index="tx_redirectsearch_search.url">URL</label>
+			<label index="tx_redirectsearch_redirect">Weiterleitung</label>
+			<label index="tx_redirectsearch_redirect.hotkey">Tastenkürzel</label>
+			<label index="tx_redirectsearch_redirect.url">URL</label>
+			<label index="tt_content.list_type_pi1">Erzeuge eine FF Searchbar</label>
+		</languageKey>
+	</data>
+</T3locallang>

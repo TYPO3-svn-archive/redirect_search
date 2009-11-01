@@ -1,0 +1,2 @@
+# cat=basic; type=boolean; label= Show Help, Show all Entries, if hotKey notfound in Database
+showHelp = 1

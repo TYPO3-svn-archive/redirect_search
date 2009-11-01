@@ -1,0 +1,20 @@
+
+xmlnews = PAGE
+xmlnews {
+  typeNum = 222
+
+  	10 < styles.content.get
+	10.andWhere = 'list_type' = redirect_search_pi1
+	plugin.tx_redirectsearch_pi1.addSearchXML = 1
+
+
+/*  
+  config {
+    disableAllHeaderCode = 1
+    additionalHeaders = Content-type:application/xml
+    xhtml_cleaning = 0
+    admPanel = 0
+	disablePrefixComment = 1
+  }
+*/  
+}
