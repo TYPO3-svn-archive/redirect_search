@@ -81,7 +81,7 @@ class tx_redirectsearch_pi1 extends tslib_pibase {
 		$this->templateCode  = 	$this->cObj->fileResource($this->conf['templateFile']);
 		
 		if(empty($this->templateCode)) {
-			$this->templateCode = $this->cObj->fileResource('EXT:' . $this->extKey . '/res/template2.tmpl');
+			$this->templateCode = $this->cObj->fileResource('EXT:' . $this->extKey . '/res/template.tmpl');
 		}
 	}
 	
@@ -102,6 +102,8 @@ class tx_redirectsearch_pi1 extends tslib_pibase {
 			'###SEARCHNAME###' 			=> 	$this->conf['pluginName'], 
 			'###SEARCHDESCRIPTION###' 	=>	$this->conf['pluginDescription'],
 			'###SEARCHURL###' 			=>	$this->getSearch_url(),
+			'###SEARCHICON_PNG###'		=>	$this->getSearch_icon($this->conf['pluginIcon'],'png'),
+			'###SEARCHICON_JPG###'		=>	$this->getSearch_icon($this->conf['pluginIcon'],'jpg'),
 		);
 		
 		// TODO - adding SearchICON
@@ -112,7 +114,25 @@ class tx_redirectsearch_pi1 extends tslib_pibase {
 		
 
 	}
+	function getSearch_icon($image,$ext){
+			$withAndHeight ='';
+			if($ext == 'png'){
+				$withAndHeight = '16'; 
+			}else{
+				$withAndHeight = '64';
+			}
+			
+			$imageConf = array(
+				'file' => 'uploads/tx_redirectsearch/' . $image,
+				'file.' => array(
+					'width' => $withAndHeight,
+					'height' => $withAndHeight,
+					'ext' => $ext,
+				)
+			);
+		return t3lib_div::getIndpEnv(TYPO3_SITE_URL) . $this->cObj->IMG_RESOURCE($imageConf);
 	
+	}
 	function getSearch_url(){
 		// host + index.php?eID=redirectsearch&amp;q={searchTerms}
 		return t3lib_div::getIndpEnv(TYPO3_SITE_URL) . 'index.php?eID=redirectsearch&amp;q={searchTerms}';

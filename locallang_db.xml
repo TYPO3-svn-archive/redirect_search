@@ -19,7 +19,8 @@
 			<label index="tt_content.list_type_pi1">Add a FF Searchbar</label>
 			<label index="tx_redirectsearch_search.tsmarker">TypoScript Marker</label>
 			<label index="tx_redirectsearch_search.marker">Marker</label>
-			<label index="tx_redirectsearch_search.usetsmarker">Use TypoScript Marker</label>			
+			<label index="tx_redirectsearch_search.usetsmarker">Use TypoScript Marker</label>
+			<label index="tx_redirectsearch_search.useadvanced">Use Advanced Mode</label>			
 		</languageKey>
 		<languageKey index="de" type="array">
 			<label index="tt_content.pi_flexform.sheet_general">Plugin Eigenschaften</label>
@@ -36,6 +37,7 @@
 			<label index="tx_redirectsearch_redirect.hotkey">Tastenkürzel</label>
 			<label index="tx_redirectsearch_redirect.url">URL</label>
 			<label index="tt_content.list_type_pi1">Erzeuge eine FF Searchbar</label>
+			<label index="tx_redirectsearch_search.useadvanced">Use Advanced Mode</label>			
 		</languageKey>
 	</data>
 </T3locallang>

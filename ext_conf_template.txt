@@ -1,2 +1,7 @@
-# cat=basic; type=boolean; label= Show Help, Show all Entries, if hotKey notfound in Database
+# cat=basic; type=boolean; label= Show Help: Show all Entries, if hotKey notfound in Database
 showHelp = 1
+
+# cat=basic; type=string; label= path for Advanced Mode : (default: typo3conf/ext/redirect_search/res/examples/)
+user_Files = typo3conf/ext/redirect_search/res/examples/
+
+

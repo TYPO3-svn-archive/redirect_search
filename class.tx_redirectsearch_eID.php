@@ -58,7 +58,6 @@ class tx_redirectsearch_eID {
 		}
 
 	}
-	
 
 	function main() {
 	
@@ -68,7 +67,7 @@ class tx_redirectsearch_eID {
 			// unset hotkey from array
 			unset($this->q[0]);
 			
-			if(is_array($row) && !empty($row)) {
+			if(is_array($row) && !empty($row) && $row[0]['useadvanced'] == 0) {
 				
 				if($row['0']['marker']== 0 && $row['0']['usetsmarker']== 0){
 					header('Location: ' .$row[0]['url'] . implode('+',$this->q));
@@ -101,6 +100,16 @@ class tx_redirectsearch_eID {
 					$typoScriptCode = $this->getTypoScript($row[0]['tsmarker']);
 					$url = str_replace('###tsmarker###',$typoScriptCode, $url);
 					header('Location: ' .$url);
+				}
+			}elseif($row[0]['useadvanced'] == 1){
+				$extConf = '';
+				$extConf = unserialize($GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf']['redirect_search']);
+				
+				$readPath = t3lib_div::getFileAbsFileName($extConf['user_Files']);
+				if (@is_dir($readPath)){
+					include_once($readPath . $row[0]['advanced'] );
+					$userfile = t3lib_div::makeInstance('tx_redirectsearch_advanced');
+					echo $userfile->main();
 				}
 			}else {
 			$this->getHelp();

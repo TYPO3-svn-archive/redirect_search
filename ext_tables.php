@@ -5,6 +5,10 @@ if (!defined ('TYPO3_MODE')) {
 
 t3lib_extMgm::allowTableOnStandardPages('tx_redirectsearch_search');
 
+if (TYPO3_MODE == 'BE')    {
+    include_once(t3lib_extMgm::extPath('redirect_search').'class.tx_redirectsearch_field_advanced.php');
+}
+
 $TCA['tx_redirectsearch_search'] = array (
 	'ctrl' => array (
 		'title'     => 'LLL:EXT:redirect_search/locallang_db.xml:tx_redirectsearch_search',		
@@ -38,7 +42,6 @@ t3lib_extMgm::addPlugin(array(
 	$_EXTKEY . '_pi1',
 	t3lib_extMgm::extRelPath($_EXTKEY) . 'ext_icon.gif'
 ),'list_type');
-
 
 if (TYPO3_MODE == 'BE') {
 	$TBE_MODULES_EXT['xMOD_db_new_content_el']['addElClasses']['tx_redirectsearch_pi1_wizicon'] = t3lib_extMgm::extPath($_EXTKEY).'pi1/class.tx_redirectsearch_pi1_wizicon.php';

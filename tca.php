@@ -57,10 +57,29 @@ $TCA['tx_redirectsearch_search'] = array (
                 'rows' => '5',
             )
         ),
-
-	),
+		'useadvanced' => array (        
+            'exclude' => 0,        
+            'label' => 'LLL:EXT:redirect_search/locallang_db.xml:tx_redirectsearch_search.useadvanced',        
+            'config' => array (
+                'type' => 'check',
+            )
+        ),
+		 'advanced' => array (        
+            'exclude' => 1,        
+            'label' => 'LLL:EXT:redirect_search/locallang_db.xml:tx_redirectsearch_search.advanced',        
+            'config' => array (
+                'type' => 'select',
+                'items' => array (
+                    array('LLL:EXT:redirect_search/locallang_db.xml:tx_redirectsearch_search.advanced.I.0', '0'),
+                ),
+                'itemsProcFunc' => 'tx_redirectsearch_field_advanced->main',    
+                'size' => 1,    
+                'maxitems' => 1,
+            )
+        ),
+ 	),
 	'types' => array (
-		'0' => array('showitem' => 'hidden;;1;;1-1-1, hotkey, url, marker, usetsmarker, tsmarker')
+		'0' => array('showitem' => 'hidden;;1;;1-1-1, hotkey, url, marker, usetsmarker, tsmarker, useadvanced, advanced')
 	),
 	'palettes' => array (
 		'1' => array('showitem' => '')

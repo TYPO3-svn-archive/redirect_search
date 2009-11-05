@@ -15,7 +15,8 @@ CREATE TABLE tx_redirectsearch_search (
 	marker tinyint(3) DEFAULT '0' NOT NULL,
 	usetsmarker tinyint(3) DEFAULT '0' NOT NULL,
     tsmarker text,
-
+	useadvanced tinyint(3) DEFAULT '0' NOT NULL,
+	advanced tinytext,
 	
 	PRIMARY KEY (uid),
 	KEY parent (pid)
