@@ -48,7 +48,7 @@ class tx_redirectsearch_field_advanced {
 		if (@is_dir($readPath)){
 		
 		    //getting all PHP files in the directory:
-		    $user_files = t3lib_div::getFilesInDir ($readPath,'php',1,1);
+		    $user_files = t3lib_div::getFilesInDir ($readPath,'php',0,1);
 
 		    // Traverse that array:
 		    foreach ($user_files as $htmlFilePath) {
@@ -57,10 +57,10 @@ class tx_redirectsearch_field_advanced {
 		        $selectorBoxItem_title='';
 			
 		        // Reading the content of the template document ...
-		        $selectorBoxItem_title = trim('(' . basename($htmlFilePath) . ')');
+		        $selectorBoxItem_title = trim('(' . $htmlFilePath . ')');
 
 		        // Finally add the new item:
-		        $params['items'][] = Array($selectorBoxItem_title, basename($htmlFilePath),'');
+		        $params['items'][] = Array($selectorBoxItem_title, $htmlFilePath,'');
 		    }
 		}
 		// No return - the $params and $pObj variables are passed by reference, so just change content in then and it is passed back automatically...
