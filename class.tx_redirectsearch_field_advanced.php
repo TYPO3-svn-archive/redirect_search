@@ -60,7 +60,7 @@ class tx_redirectsearch_field_advanced {
 		        $selectorBoxItem_title = trim('(' . $htmlFilePath . ')');
 
 		        // Finally add the new item:
-		        $params['items'][] = Array($selectorBoxItem_title, $htmlFilePath,'');
+		        $params['items'][] = array($selectorBoxItem_title, $htmlFilePath, '');
 		    }
 		}
 		// No return - the $params and $pObj variables are passed by reference, so just change content in then and it is passed back automatically...

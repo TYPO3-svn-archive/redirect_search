@@ -19,7 +19,9 @@ $TCA['tx_redirectsearch_search'] = array (
 		'crdate'    => 'crdate',
 		'cruser_id' => 'cruser_id',
 		'sortby' => 'sorting',	
-		'delete' => 'deleted',	
+		'delete' => 'deleted',
+		'requestUpdate' => 'useadvanced',
+		'dividers2tabs' => 1,
 		'enablecolumns' => array (		
 			'disabled' => 'hidden',
 		),

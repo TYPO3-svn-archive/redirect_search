@@ -37,7 +37,9 @@
 			<label index="tx_redirectsearch_redirect.hotkey">Tastenkürzel</label>
 			<label index="tx_redirectsearch_redirect.url">URL</label>
 			<label index="tt_content.list_type_pi1">Erzeuge eine FF Searchbar</label>
-			<label index="tx_redirectsearch_search.useadvanced">Use Advanced Mode</label>			
+			<label index="tx_redirectsearch_search.useadvanced">Use Advanced Mode</label>
+			<label index="tx_redirectsearch_search.advanced">Choose an Userfile</label>
+			<label index="tx_redirectsearch_search.advancedtab">Advanced Mode</label>
 		</languageKey>
 	</data>
 </T3locallang>

@@ -57,14 +57,15 @@ $TCA['tx_redirectsearch_search'] = array (
                 'rows' => '5',
             )
         ),
-		'useadvanced' => array (        
+		'useadvanced' => array (
             'exclude' => 0,        
             'label' => 'LLL:EXT:redirect_search/locallang_db.xml:tx_redirectsearch_search.useadvanced',        
             'config' => array (
                 'type' => 'check',
             )
         ),
-		 'advanced' => array (        
+		 'advanced' => array (
+			'displayCond' => 'FIELD:useadvanced:=:1',
             'exclude' => 1,        
             'label' => 'LLL:EXT:redirect_search/locallang_db.xml:tx_redirectsearch_search.advanced',        
             'config' => array (
@@ -79,7 +80,9 @@ $TCA['tx_redirectsearch_search'] = array (
         ),
  	),
 	'types' => array (
-		'0' => array('showitem' => 'hidden;;1;;1-1-1, hotkey, url, marker, usetsmarker, tsmarker, useadvanced, advanced')
+		'0' => array('showitem' => 'hidden;;1;;1-1-1, hotkey, url, marker, usetsmarker, tsmarker, useadvanced,
+					--div--;LLL:EXT:redirect_search/locallang_db.xml:tx_redirectsearch_search.advancedtab, advanced'
+				)
 	),
 	'palettes' => array (
 		'1' => array('showitem' => '')
