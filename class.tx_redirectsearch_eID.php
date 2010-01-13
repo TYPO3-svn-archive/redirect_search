@@ -109,7 +109,7 @@ class tx_redirectsearch_eID {
 				if (@is_dir($readPath)){
 					include_once($readPath . $row[0]['advanced'] );
 					$userfile = t3lib_div::makeInstance('tx_redirectsearch_advanced');
-					echo $userfile->main();
+					echo $userfile->main($this->q);
 				}
 			}else {
 			$this->getHelp();

@@ -30,7 +30,7 @@
 
 class tx_redirectsearch_advanced{ 
 
-function main(){
+function main($params){
 
         $ip = t3lib_div::getIndpEnv('REMOTE_ADDR');
         

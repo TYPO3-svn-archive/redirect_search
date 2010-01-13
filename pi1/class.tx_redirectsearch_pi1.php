@@ -65,7 +65,7 @@ class tx_redirectsearch_pi1 extends tslib_pibase {
 			die($content);
 		}else{
 			$this->addHeaderPart();
-			$content .= '<a href="#" onclick="window.external.AddSearchProvider(\'' . t3lib_div::getIndpEnv(TYPO3_SITE_URL) . $this->getOpenSearch_url() . '\');">huhu</a>'   ;
+			$content = $this->buildTextAndLink();
 			$content = $this->pi_wrapInBaseClass($content);
 		}
 		return $content;
@@ -83,6 +83,26 @@ class tx_redirectsearch_pi1 extends tslib_pibase {
 		if(empty($this->templateCode)) {
 			$this->templateCode = $this->cObj->fileResource('EXT:' . $this->extKey . '/res/template.tmpl');
 		}
+	}
+	
+	function buildTextAndLink(){
+		$atagparams = '';
+		$atagparams .= 'onclick="window.external.AddSearchProvider(\'';
+		$atagparams .= t3lib_div::getIndpEnv(TYPO3_SITE_URL) . $this->getOpenSearch_url(); 
+		$atagparams .= '\');"';
+		
+		$typoConf = array();
+		$typoConf = array(
+			'parameter' => $GLOBALS['TSFE']->id,
+			'ATagParams' => $atagparams,
+		);
+		
+#$content .= '<a href="#" onclick="window.external.AddSearchProvider(\'' . t3lib_div::getIndpEnv(TYPO3_SITE_URL) . $this->getOpenSearch_url() . '\');">huhu</a>'   ;
+
+		$content .= '<a href="#" onclick="window.external.AddSearchProvider(\'' . t3lib_div::getIndpEnv(TYPO3_SITE_URL) . $this->getOpenSearch_url() . '\');">huhu</a>'   ;
+
+	
+	return $content;
 	}
 	
 	function addHeaderPart(){
@@ -106,10 +126,7 @@ class tx_redirectsearch_pi1 extends tslib_pibase {
 			'###SEARCHICON_JPG###'		=>	$this->getSearch_icon($this->conf['pluginIcon'],'jpg'),
 		);
 		
-		// TODO - adding SearchICON
-		
 		$entries[] = $this->cObj->substituteMarkerArray($templateSubpart, $markerArray);
-
 		return implode('', $entries);
 		
 
